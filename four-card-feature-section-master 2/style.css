@@ -144,17 +144,69 @@ body {
   font-size: 0.9375rem;
 }
 
+/* card colors*/
+
+.card_red-top {
+  border-top: 4px solid var(--Red);
+  grid-area: red;
+}
+
+.card_cyan-top {
+  border-top: 4px solid var(--Cyan);
+  grid-area: cyan;
+}
+
+.card_orange-top {
+  border-top: 4px solid var(--Orange);
+  grid-area: orange;
+}
+
+.card_blue-top {
+  border-top: 4px solid var(--Blue);
+  grid-area: blue;
+}
+
+/* card grid */
+
 .card-container {
   display: grid;
-  max-width: 1040px;
+  max-width: 1100px;
   margin: 0 auto;
+  align-items: center;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 250px);
-  gap: 10px;
+  grid-template-areas:
+    "cyan red blue"
+    " cyan orange blue";
+  gap: 30px;
 }
 
 .card {
-  border-top: 4px solid var(--Red);
-  border-radius: 12px;
+  height: 250px;
+  border-radius: 6px;
   box-shadow: 0 0 20px -5px rgb(0, 0, 0, 0.5);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card * {
+  margin: 0;
+}
+
+.card p {
+  font-size: 0.9375rem;
+}
+
+.card__img {
+  width: 64px;
+  height: 64px;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.card__title {
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
