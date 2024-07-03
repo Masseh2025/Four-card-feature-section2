@@ -117,10 +117,9 @@ body {
 /* text for top */
 
 .text-container {
-  margin: 0 auto;
+  margin: 4rem auto;
   text-align: center;
   max-width: 600px;
-  padding: 4rem;
   font-weight: 200;
 }
 
@@ -179,6 +178,7 @@ body {
     "cyan red blue"
     " cyan orange blue";
   gap: 30px;
+  margin-bottom: 4rem;
 }
 
 .card {
@@ -209,4 +209,25 @@ body {
   color: var(--Very-Dark-Blue);
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+/* media quireys */
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "blue"
+      "red"
+      "orange"
+      "cyan";
+    margin-inline: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading-title {
+    font-size: 1.5rem;
+  }
 }
